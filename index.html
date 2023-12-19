@@ -54,7 +54,11 @@
     </header>
     <main class="main">
       <div class="main__banner">
-        <img class="main__banner-img" src="images/header-bg.jpg" alt="">
+        <picture class="main__banner-img">
+          <source srcset="images/header-bg-small.jpg" media="(max-width: 425px)">
+          <source srcset="images/header-bg-medium.jpg" media="(max-width: 768px)">
+          <img src="images/header-bg.jpg" alt="">
+        </picture>
         <div class="main__banner-info">
           <div class="container">
             <h1 class="title main__banner-title">Hatton Garden Jewellers</h1>
@@ -159,22 +163,22 @@
         <h3 class="press__title">As seen on:</h3>
         <div class="press__list">
           <a class="press__item" href="#">
-            <img class="press__img" src="images/press-1.png" alt="">
+            <img class="press__img" src="images/press-1.svg" alt="">
           </a>
           <a class="press__item" href="#">
-            <img class="press__img" src="images/press-2.png" alt="">
+            <img class="press__img" src="images/press-2.svg" alt="">
           </a>
           <a class="press__item" href="#">
-            <img class="press__img" src="images/press-3.png" alt="">
+            <img class="press__img" src="images/press-3.svg" alt="">
           </a>
           <a class="press__item" href="#">
-            <img class="press__img" src="images/press-4.png" alt="">
+            <img class="press__img" src="images/press-4.svg" alt="">
           </a>
           <a class="press__item" href="#">
-            <img class="press__img" src="images/press-5.png" alt="">
+            <img class="press__img" src="images/press-5.svg" alt="">
           </a>
           <a class="press__item" href="#">
-            <img class="press__img" src="images/press-6.png" alt="">
+            <img class="press__img" src="images/press-6.svg" alt="">
           </a>
         </div>
       </section>
@@ -615,9 +619,9 @@
                 Subscribe to our newsletter
               </p>
             </div>
-            <form class="footer__form">
-              <input id="footer-email" type="email" placeholder="Enter your email">
-              <button id="footer-submit" type="button" data-modal-btn="modal-book">Subscribe</button>
+            <form class="footer__form" action="#">
+              <input id="footer-email" name="email" type="email" placeholder="Enter your email" required>
+              <button id="footer-submit" type="submit">Subscribe</button>
             </form>
           </div>
           <div class="footer__column">
@@ -640,7 +644,7 @@
       </div>
     </footer>
   </div>
-
+  
   <div class="fade-modal" id="modal-book">
     <div class="modal modal-book">
       <h3 class="title modal-book__title">Schedule An Appointment</h3>
@@ -659,7 +663,7 @@
         </div>
         <div class="modal-book__item">
           <label class="modal-book__label" for="modal-book-phone">Phone</label>
-          <input class="modal-book__input" name="phone" type="tel" id="modal-book-phone">
+          <input class="modal-book__input" name="phone" type="tel" required id="modal-book-phone">
         </div>
         <div class="modal-book__item">
           <label class="modal-book__label" for="modal-book-textarea">Your message *</label>
